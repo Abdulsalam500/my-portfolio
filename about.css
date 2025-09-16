@@ -1,0 +1,179 @@
+:root {
+  --bg: #000000;
+  --panel: #393112;
+  --panel-2: #f29011;
+  --text: #e8ebf7;
+  --muted: #f5f6fa;
+  --brand: #ef370e;
+  --accent: #ed9912;
+  --border: #21305e;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Reset and base */
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+header {
+    width: 100%;
+    background-color: rgb(24, 22, 20);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logo span {
+    color: red;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.4s;
+    font-size: 16px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: red;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+/* Section */
+section.section {
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--brand);
+  text-align: center;
+}
+
+.section-text {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.125rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Cards grid */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* Responsive typography */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}

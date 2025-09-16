@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../fontawesome-free-7.0.0-web/css/all.css" />
+
+  <title>Abdulsalam Mosleah</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <!-- Menu  -->
+      <i class="fa-solid fa-bars menu-toggle" id="menu-icon"></i>
+      <h2 class="logo">Abdulsalam <span>Mosleah</span></h2>
+
+
+
+
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+         <li><a href="project.html">projects</a></li>
+      </ul>
+
+      <!-- Search & Login -->
+
+      <div class="nav-actions">
+       
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="Search here..." />
+        <a href="Login.html" class="btn">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <section class="hero">
+      <div class="content">
+        <h4>Hello, my name is</h4>
+        <h1><span>A</span>bdulsalam <span>M</span>osleah</h1>
+        <h3><span>I</span>'m a <span>W</span>eb <span>D</span>eveloper</h3>
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook"></i>
+          <a href="https://wa.me/967778937910"><i class="fa-brands fa-whatsapp"></i></a>
+          <i class="fa-brands fa-instagram"></i>
+
+        </div>
+      </div>
+
+      <div class="profile-img">
+        <img src="images/mee.png" alt="Profile Image" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p><span>©</span> 2025 <span>A</span>bdulsalam <span>M</span>osleah | All Rights Reserved</p>
+  </footer>
+
+  <!-- JavaScript for Menu -->
+  <script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+
+
+</body>
+
+</html>

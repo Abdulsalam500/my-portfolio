@@ -1,0 +1,166 @@
+body {
+    background-image: url("imges/background2.jpeg");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+form {
+    background: rgba(40, 34, 34, 0.9);
+    border: 1px solid #c9800294;
+    border-radius: 30px;
+    max-width: 90%;
+    width: 400px;
+    margin: 10vh auto;
+    padding: 20px;
+    text-align: center;
+    color: #983737;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+
+header {
+    width: 100%;
+    background-color: rgb(24, 22, 20);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.logo span {
+    color: red;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.4s;
+    font-size: 16px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: red;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+
+input,
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+}
+
+input {
+    background-color: transparent;
+    color: #fbfcff;
+    border: 1px solid #e0880c;
+    width: 95%;
+
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    background-color: #da6313;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to right, #634526, #ce3604);
+    color: white;
+}
+
+
+p {
+    font-size: 16px;
+    color: rgb(221, 134, 21);
+    margin-top: 30px;
+}
+
+a {
+    color: #f8e9e9;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #ff5500;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 8px 0;
+    }
+
+    .btn {
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    form {
+        margin: 8vh auto;
+        padding: 15px;
+    }
+}

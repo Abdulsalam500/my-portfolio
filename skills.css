@@ -1,0 +1,193 @@
+
+:root{
+  --bg: #0b0c0c;
+  --panel: #110f0f;
+  --panel-2: #cf4421;
+  --text: #e8ebf7;
+  --muted: #f4f4f6;
+  --brand: #d91919;
+  --accent: #eb8d1a;
+  --border: #775e3a;
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+header {
+    width: 100%;
+    background-color: rgb(24, 22, 20);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+.logo span {
+    color: red;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+.nav-links li {
+    margin: 0 10px;
+}
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.4s;
+    font-size: 16px;
+}
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: red;
+}
+
+.btn {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+
+body {
+  background-image: url("images/background2.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0;
+}
+
+/* Container for better spacing */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(18, 25, 57, 0.85); /* شفاف مع خلفية داكنة */
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Each Skill Box */
+.skill {
+  background-color: var(--panel);
+  padding: 20px 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+.skill:hover {
+  transform: translateY(-8px);
+}
+
+/* Skill Title */
+.skill > span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--brand);
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Skill Description */
+.skill-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+/* Progress Bar Background */
+.bar {
+  height: 14px;
+  background: color-mix(in oklab, var(--panel-2), transparent 40%);
+  border-radius: 999px;
+  border: 1.5px solid var(--border);
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress Bar Fill */
+.bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  border-radius: 999px;
+  box-shadow: 0 0 6px var(--accent);
+  transition: width 1s ease-in-out;
+}
+
+/* Responsive Text Size */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .skill > span {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 8px 0;
+    }
+
+    .btn {
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+
+    form {
+        margin: 8vh auto;
+        padding: 15px;
+    }
+}
