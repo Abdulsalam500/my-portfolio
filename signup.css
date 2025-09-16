@@ -6,7 +6,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url("imges/background2.jpeg"); /* تأكد من مسار الصورة */
+ background-color: rgba(43, 38, 38, 0.764); /* تأكد من مسار الصورة */
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -271,4 +271,5 @@ button:hover {
     padding: 10px;
   }
 }
+
 
